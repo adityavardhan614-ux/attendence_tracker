@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance Tracker - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-center">
+    <div class="dashboard-header">
+      <div>
+        <h1>Attendance Dashboard</h1>
+        <p>Welcome to your student overview.</p>
+      </div>
+      <button id="logoutBtn" class="secondary-btn">Logout</button>
+    </div>
+
+    <div class="card-grid">
+      <button class="dashboard-card" data-section="detailsSection">
+        <h2>Student Details</h2>
+        <p>View name, ID, branch and year.</p>
+      </button>
+      <button class="dashboard-card" data-section="attendanceSection">
+        <h2>Attendance Percentage</h2>
+        <p>See your current attendance score.</p>
+      </button>
+      <button class="dashboard-card" data-section="marksSection">
+        <h2>Marks</h2>
+        <p>Check your marks for 3 subjects.</p>
+      </button>
+      <button class="dashboard-card" data-section="logoutSection">
+        <h2>Logout</h2>
+        <p>Return to the login page.</p>
+      </button>
+    </div>
+
+    <div class="section-panel" id="detailsSection">
+      <h2>Student Details</h2>
+      <div class="info-grid">
+        <div><strong>Name</strong><span id="studentName">-</span></div>
+        <div><strong>Student ID</strong><span id="studentID">-</span></div>
+        <div><strong>Branch</strong><span id="studentBranch">-</span></div>
+        <div><strong>Year</strong><span id="studentYear">-</span></div>
+      </div>
+    </div>
+
+    <div class="section-panel hidden" id="attendanceSection">
+      <h2>Attendance Percentage</h2>
+      <p class="large-text" id="attendanceValue">-</p>
+      <div class="progress-bar">
+        <div id="attendanceFill" class="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="section-panel hidden" id="marksSection">
+      <h2>Marks Summary</h2>
+      <table>
+        <thead>
+          <tr><th>Subject</th><th>Marks</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Maths</td><td id="mathsMark">-</td></tr>
+          <tr><td>Physics</td><td id="physicsMark">-</td></tr>
+          <tr><td>Chemistry</td><td id="chemistryMark">-</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
